@@ -1,0 +1,169 @@
+@import url(reset.css);
+@import url(root.css);
+
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: var(--cor-primaria);
+    font-family: var(--fonte-principal);
+    font-weight: 300;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: var(--espacamento);
+    padding-top: 30px;
+    position: relative;
+}
+
+nav ul li a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: var(--tamanho-fonte);
+}
+
+nav h1 {
+    color: var(--cor-secundaria);
+    font-family: cursive;
+    font-size: 25px;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 0%;
+    background-color: var(--cor-secundaria);
+    transition: all ease-in-out 500ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+main {
+    max-width: var(--max-largura);
+    margin: var(--espacamento) auto;
+    padding: var(--espacamento);
+    background-color: var(--cor-secundaria);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    /* align-items: center; */
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.form-cad{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.table th {
+    background-color: var(--cor-secundaria);
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-modal);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--cor-secundaria);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.container h2, p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.button {
+    display: flex;
+}
+
+button {
+    background-color: var(--cor-botao);
+    color: var(--cor-texto-botao);
+    cursor: pointer;
+    width: 100%;
+    height: 35px;
+}
+button:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+input[type="submit"] {
+    background-color: var(--cor-botao);
+    color: var(--cor-texto-botao);
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+.cliente_cad {
+    background: rgb(0, 26, 255);
+}
+.cliente_cad:hover {
+    background: rgb(0, 153, 255);
+}
+/* teste */

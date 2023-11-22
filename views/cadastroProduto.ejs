@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Cadastro de Produto</title>
+</head>
+<body>
+    <nav>
+        <h1>⛽ Posto do Jubileu</h1>
+        <ul>
+            <li> <a href="/"> Home </a></li>
+            <li> <a href="/consultarPedidos"> Services </a></li>
+            <li> <a href="/cadastroProduto"> Products </a></li>
+            <li> <a href="/cadastroFuncionario"> Employees </a></li>
+            <li> <a href="/agendamentoTrocaOleo"> Schedule </a></li>
+            <li> <a href="#"> About </a></li>
+            <li> <a href="#"> Contact Us </a></li>
+         </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h2>Cadastro de Produto</h2>
+            <form id="cadastroProdutoForm" action="/savarProduto" method="POST">
+                <label for="nomeProd">Nome do Produto:</label>
+                <input type="text" id="nomeProd" name="nomeProd" maxlength="30" placeholder="Nome:" required>
+                
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" name="descricao" maxlength="255" placeholder="Descrição">
+
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" placeholder="Quantidade"/>
+
+                <label for="preco">Preço:</label>
+                <input type="text" id="preco" name="preco" maxlength="12,2" value="" placeholder="R$:"/>
+
+                <input type="submit" value="Cadastrar">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Posto do Jubileu</p>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+:root {
+    --cor-primaria: #222;
+    --cor-secundaria: #fff;
+    --fonte-principal: 'Work-Sans', sans-serif;
+    --tamanho-fonte: 14px;
+    --cor-fundo: #bbbbbb;
+    --max-largura: 800px;
+    --espacamento: 20px;
+    --cor-botao: #4caf50;
+    --cor-botao-hover: #4ca049;
+    --cor-texto-botao: #fff;
+    --background-modal: rgba(0,0,0,0.7);
+}

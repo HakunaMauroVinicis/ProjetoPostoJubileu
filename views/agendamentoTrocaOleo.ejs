@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Agendamento de Troca de Óleo</title>
+</head>
+<body>
+    <nav>
+        <h1>⛽ Posto do Jubileu</h1>
+        <ul>
+            <li> <a href="/"> Home </a></li>
+            <li> <a href="/consultarPedidos"> Services </a></li>
+            <li> <a href="/cadastroProduto"> Products </a></li>
+            <li> <a href="/cadastroFuncionario"> Employees </a></li>
+            <li> <a href="/agendamentoTrocaOleo"> Schedule </a></li>
+            <li> <a href="#"> About </a></li>
+            <li> <a href="#"> Contact Us </a></li>
+         </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h2>Agendamento de Troca de Óleo</h2>
+            <form id="agendamentoForm" action="/agendar" method="post">
+                <!-- Campos do formulário para agendamento -->
+                <label for="dataAgendamento">Selecione a data:</label>
+                <input type="date" id="dataAgendamento" name="dataAgendamento" required>
+    
+                <label for="horaAgendamento">Selecione o horário:</label>
+                <input type="time" id="horaAgendamento" name="horaAgendamento" required>
+    
+                <label for="idCliente">ID do Cliente:</label>
+                <input type="number" id="idCliente" name="idCliente" required>
+    
+                <label for="idProfissional">ID do Profissional:</label>
+                <input type="number" id="idProfissional" name="idProfissional">
+    
+                <label for="servicoAgenda">Serviço:</label>
+                <input type="text" id="servicoAgenda" name="servicoAgenda">
+    
+                <input type="submit" value="Cadastrar">
+            </form>
+            <div id="calendario"></div>
+        </div>
+    </main>
+
+        <footer>
+        <p>&copy; 2023 Posto do Jubileu</p>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Cadastro de Funcionário</title>
+</head>
+<body>
+    <nav>
+        <h1>⛽ Posto do Jubileu</h1>
+        <ul>
+            <li> <a href="/"> Home </a></li>
+            <li> <a href="/consultarPedidos"> Services </a></li>
+            <li> <a href="/cadastroProduto"> Products </a></li>
+            <li> <a href="/cadastroFuncionario"> Employees </a></li>
+            <li> <a href="/agendamentoTrocaOleo"> Schedule </a></li>
+            <li> <a href="#"> About </a></li>
+            <li> <a href="#"> Contact Us </a></li>
+         </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h2>Cadastro de Funcionário</h2>
+            <form id="cadastroFuncionarioForm" action="/salvarFuncionario" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+    
+                <label for="dataAdmissao">Data de Admissão:</label>
+                <input type="date" id="dataAdmissao" name="dataAdmissao" required>
+        
+                <input type="submit" value="Cadastrar">
+    
+            </form>
+          
+            <!-- Adicione esta tabela abaixo do formulário existente -->
+            <table id="tabelaFuncionarios" class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Data de Admissão</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os dados dos funcionários serão exibidos aqui -->
+                    <% funcionarios.forEach(funcionario => { %>
+                        <tr>
+                            <td><%= funcionario.idProfissional %></td>
+                            <td><%= funcionario.NomeProfissional %></td>
+                            <td><%= funcionario.dataAdmissao %></td>
+                            <td><button onclick="editarFuncionario(<%= funcionario.idProfissional %>)">Editar</button></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Posto do Jubileu</p>
+    </footer>
+<!-- Adicione este modal no final do arquivo, antes do fechamento do body -->
+<div id="modalEditar" class="modal">
+    <div class="modal-content">
+        <h2>Editar Funcionário</h2>
+        <form id="editarFuncionarioForm" method="POST">
+            <label for="nomeEdit">Nome:</label>
+            <input type="text" id="nomeEdit" name="nomeEdit" required>
+
+            <label for="dataAdmissaoEdit">Data de Admissão:</label>
+            <input type="date" id="dataAdmissaoEdit" name="dataAdmissaoEdit" required>
+
+            <input type="hidden" id="idProfissionalEdit" name="idProfissionalEdit">
+
+            <div>
+                <input type="button" value="Salvar Edição" onclick="salvarEdicao()">
+                <button type="button" onclick="fecharModal()">Fechar</button>
+            </div>
+        </form>
+    </div>
+</div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
